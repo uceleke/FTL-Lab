@@ -1,7 +1,4 @@
 ﻿<# 
-.SYNOPSIS
-  Storage usage analyzer for a fileshare (WinDirStat-style) with export prompt
-  and access-denied diagnostics to avoid misleading 0 B folders.
 
 .DESCRIPTION
   - One-pass scan of files with access-denied tracking (noisy "0 B" folders get flagged Partial=$true).
@@ -384,4 +381,5 @@ if (-not $NoPromptToExport) {
 <#
 .\Get-ShareUsage.ps1 -Path \\filesrv\Shares\Finance -Depth 2 -Top 30
 .\Get-ShareUsage.ps1 -Path D:\Shares -ExcludePaths '$RECYCLE.BIN','System Volume Information','\\node_modules\\' -Depth 3 -Top 50
+
 #>
